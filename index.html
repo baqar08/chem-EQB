@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>ChemEase</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="container">
+<header>
+    <h1>ChemEAse</h1>
+    <button id="themeToggle"></button>
+</header>
+<p class="subtitle">Balance . Analyze . Calculate</p>
+
+<section>
+    <h3>Equation Balancer</h3>
+    <input id="equation" pllaceholder="e.g. H2 + O2 -> H2O">
+    <button onclick="">oooo</button>
+    <div id="steps"></div>
+    <p id="balanceResult"></p>
+    <p id="reactionType"></p>
+    <canvas id="atomChart"></canvas>
+</section>
+
+<section>
+        <h3>Molar Mass Calculater</h3>
+        <input id="compound" placeholder="e.g. H2O">
+        <button onclick="calcMolar()">Calculate</button>
+        <p id="molarResult"></p>
+    </section>
+
+<section>
+    <h3>Stoichiometric Ratios</h3>
+    <table id="ratioTable"></table>
+</section>
+
+<section>
+    <h3>History</h3>
+    <div class="historyButtons">
+        <button onclick="exportHistory()"></button>
+        <button onclick="clearHistory()">Clear</button>
+    </div>
+    <ul id="historyList"></ul>
+</section>
+
+<footer>  baqar  |  Python + JS</footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+
+
