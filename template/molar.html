@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Molar Mass – Chem-EQB</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<nav class="navbar">
+    <a class="nav-title" href="{{ url_for('home') }}">Chem-EQB</a>
+    <div class="nav-links">
+        <a href="{{ url_for('home') }}">Balance</a>
+        <a href="{{ url_for('molar') }}">Molar Mass</a>
+        <a href="{{ url_for('composition') }}">Composition</a>
+        <a href="{{ url_for('about') }}">About</a>
+    </div>
+</nav>
+
+<div class="container">
+    <h1>Molar Mass Calculator</h1>
+
+    <p class="guide">
+        Input Format:<br>
+        • Use capital letters for new elements<br>
+        • Numbers represent subscripts<br>
+        • Examples: <b>H2O</b>, <b>NaCl</b>, <b>Ca(OH)2</b>, <b>Al2(SO4)3</b>
+    </p>
+
+    <input id="molarInput" placeholder="H2O">
+    <button onclick="calculateMolar()">Calculate</button>
+
+    <div id="molarResult"></div>
+</div>
+
+<script src="{{ url_for('static', filename='js/molar.js') }}"></script>
+</body>
+</html>
