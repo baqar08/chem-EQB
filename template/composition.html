@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Composition | Chem-EQB</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <a class="nav-title" href="{{ url_for('home') }}">Chem-EQB</a>
+
+    <div class="nav-links">
+        <a href="{{ url_for('home') }}">Balance</a>
+        <a href="{{ url_for('molar') }}">Molar Mass</a>
+        <a href="{{ url_for('composition') }}">Composition</a>
+        <a href="{{ url_for('about') }}">About</a>
+    </div>
+</nav>
+
+<div class="page-wrapper">
+
+    <div class="container">
+        <h1>Percent Composition Calculator</h1>
+
+        <p class="guide">
+            Input Format:<br>
+            • Use correct chemical notation<br>
+            • Parentheses allowed<br>
+            • Example: <b>C6H12O6, CaCO3, Al2(SO4)3</b>
+        </p>
+
+        <input id="compInput" placeholder="C6H12O6">
+        <button onclick="calculateComposition()">Calculate</button>
+
+        <div id="result"></div>
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/composition.js') }}"></script>
+
+</body>
+</html>
