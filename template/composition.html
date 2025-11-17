@@ -4,12 +4,10 @@
     <title>Composition | Chem-EQB</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-
 <body>
 
 <nav class="navbar">
     <a class="nav-title" href="{{ url_for('home') }}">Chem-EQB</a>
-
     <div class="nav-links">
         <a href="{{ url_for('home') }}">Balance</a>
         <a href="{{ url_for('molar') }}">Molar Mass</a>
@@ -18,23 +16,57 @@
     </div>
 </nav>
 
-<div class="page-wrapper">
+<div class="container">
 
-    <div class="container">
-        <h1>Percent Composition Calculator</h1>
+    <h1>Percentage Composition</h1>
 
-        <p class="guide">
-            Input Format:<br>
-            • Use correct chemical notation<br>
-            • Parentheses allowed<br>
-            • Example: <b>C6H12O6, CaCO3, Al2(SO4)3</b>
-        </p>
+    <select id="modeSelect" style="width:100%;padding:12px;margin-top:20px;border-radius:8px;">
+        <option value="">Select Mode</option>
+        <option value="single">Single Compound</option>
+        <option value="equation">Equation</option>
+    </select>
 
-        <input id="compInput" placeholder="C6H12O6">
-        <button onclick="calculateComposition()">Calculate</button>
+    <div id="singleMode" style="display:none; margin-top:20px;">
 
-        <div id="result"></div>
-    </div>
+    <input id="singleInput"
+           placeholder="Enter Compound (e.g. C6H12O6)"
+           style="width:100%;padding:12px;border-radius:8px;margin-bottom:10px;">
+
+    <button onclick="calcSingle()"
+            style="width:100%;padding:12px;border-radius:8px;margin-bottom:15px;">
+        Calculate
+    </button>
+
+    <div id="singleResult"
+         style="background:#fff;padding:15px;border-radius:8px;"></div>
+
+</div>
+
+    <div id="eqMode" style="display:none; margin-top:20px;">
+
+    <input id="eqInput"
+           placeholder="Enter Equation (e.g. H2 + O2 = H2O)"
+           style="width:100%;padding:12px;border-radius:8px;margin-bottom:10px;">
+
+    <input id="targetInput"
+           placeholder="Enter Element or Compound (e.g. H or H2O)"
+           style="width:100%;padding:12px;border-radius:8px;margin-bottom:10px;">
+
+    <select id="sideSelect"
+            style="width:100%;padding:12px;border-radius:8px;margin-bottom:10px;">
+        <option value="reactants">Reactants</option>
+        <option value="products">Products</option>
+    </select>
+
+    <button onclick="calcEquation()"
+            style="width:100%;padding:12px;border-radius:8px;margin-bottom:15px;">
+        Calculate
+    </button>
+
+    <div id="eqResult"
+         style="background:#fff;padding:15px;border-radius:8px;"></div>
+
+</div>
 
 </div>
 
