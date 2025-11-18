@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About – Chem-EQB</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<nav class="navbar">
+    <a class="nav-title" href="{{ url_for('home') }}">Chem-EQB</a>
+    <div class="nav-links">
+        <a href="{{ url_for('home') }}">Balance</a>
+        <a href="{{ url_for('molar') }}">Molar Mass</a>
+        <a href="{{ url_for('composition') }}">Composition</a>
+        <a href="{{ url_for('about') }}">About</a>
+    </div>
+</nav>
+
+<div class="container">
+    <h1>About Chem-EQB</h1>
+    <p>
+        Chem-EQB is a simple web tool that helps students, teachers, and chemistry enthusiasts 
+        balance chemical equations and calculate molar masses quickly and accurately.
+    </p>
+    <p>
+        Built using Flask, SymPy, HTML, CSS, and JavaScript.
+    </p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chem-EQB</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<nav class="navbar">
+    <a class="nav-title" href="{{ url_for('home') }}">Chem-EQB</a>
+    <div class="nav-links">
+        <a href="{{ url_for('home') }}">Balance</a>
+        <a href="{{ url_for('molar') }}">Molar Mass</a>
+        <a href="{{ url_for('composition') }}">Composition</a>
+        <a href="{{ url_for('about') }}">About</a>
+    </div>
+</nav>
+
+<div class="container">
+    <h1>Balance Chemical Equations</h1>
+
+    <p class="guide">
+        Input Format:<br>
+        • Use '+' to separate compounds<br>
+        • Use '=' between reactants and products<br>
+        • Example: <b>H2 + O2 = H2O</b><br>
+    </p>
+
+    <input id="eqInput" placeholder="H2 + O2 = H2O">
+    <button onclick="runBalance()">Balance</button>
+
+    <div id="result"></div>
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+<script>
+function runBalance() {
+    let input = document.getElementById("eqInput").value;
+    let result = balanceEquation(input);
+    document.getElementById("result").innerText = result;
+}
+</script>
+
+</body>
+</html>
