@@ -3,11 +3,16 @@
 <head>
     <title>Composition | Chem-EQB</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bree+Serif&family=Momo+Signature&family=Momo+Trust+Display&family=Titan+One&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Bree+Serif&family=Momo+Signature&family=Momo+Trust+Display&family=Titan+One&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
 <nav class="navbar">
-    <a class="nav-title" href="{{ url_for('home') }}">Chem-EQB</a>
+    <a class="nav-title" href="{{ url_for('home') }}">🧪 chem-EQB</a>
     <div class="nav-links">
         <a href="{{ url_for('home') }}">Balance</a>
         <a href="{{ url_for('molar') }}">Molar Mass</a>
@@ -18,7 +23,7 @@
 
 <div class="container">
 
-    <h1>Percentage Composition</h1>
+    <h1 style="font-family: 'Momo Trust Display', sans-serif;">Percentage Composition</h1>
 
     <select id="modeSelect" style="width:100%;padding:12px;margin-top:20px;border-radius:8px;">
         <option value="">Select Mode</option>
