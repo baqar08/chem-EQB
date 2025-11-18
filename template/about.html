@@ -97,14 +97,15 @@
 </head>
 <body>
 
-    <nav class="navbar">
-        <a href="/" class="nav-title">🧪 chem-EQB</a>
-        <div class="nav-links">
-            <a href="/">Balance</a>
-            <a href="/molar_mass">Molar Mass</a>
-            <a href="/balancer">Composition</a>
-            <a href="/about" style="color: white;">About</a> </div>
-    </nav>
+<nav class="navbar">
+    <a class="nav-title" href="{{ url_for('home') }}">🧪 chem-EQB</a>
+    <div class="nav-links">
+        <a href="{{ url_for('home') }}">Balance</a>
+        <a href="{{ url_for('molar') }}">Molar Mass</a>
+        <a href="{{ url_for('composition') }}">Composition</a>
+        <a href="{{ url_for('about') }}">About</a>
+    </div>
+</nav>
 
     <div class="page-container">
         
